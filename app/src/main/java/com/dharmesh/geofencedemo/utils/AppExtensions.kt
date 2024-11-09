@@ -69,7 +69,12 @@ fun View.showSnackBar(
 
     val typedValue = TypedValue()
     var actionBarHeight = 0
-    if (this.context.theme.resolveAttribute(androidx.appcompat.R.attr.actionBarSize, typedValue, true)) {
+    if (this.context.theme.resolveAttribute(
+            androidx.appcompat.R.attr.actionBarSize,
+            typedValue,
+            true
+        )
+    ) {
         actionBarHeight =
             TypedValue.complexToDimensionPixelSize(typedValue.data, resources.displayMetrics)
     }

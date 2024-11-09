@@ -52,23 +52,23 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var mBinding: ActivityMainBinding
     private val homeViewModel: HomeViewModel by viewModels()
     private lateinit var mMap: GoogleMap
-    private lateinit var geofencingClient: GeofencingClient
+    private lateinit var geofenceManager: GeofenceManager
     private lateinit var fusedLocationProviderClient: FusedLocationProviderClient
-    private lateinit var geofenceHelper: GeofenceManager
-    private lateinit var locationCallback: LocationCallback
+    private lateinit var geofencingClient: GeofencingClient
+
+    private val locationCallback = object : LocationCallback() {
+        override fun onLocationResult(locationResult: LocationResult) {
+            locationResult.locations.forEach { updateLocationOnMap(it) }
+        }
+    }
     private lateinit var locationRequest: LocationRequest
     private var currentLocationMarker: Marker? = null
-    private val locationPermission = arrayOf(
-        Manifest.permission.ACCESS_FINE_LOCATION,
-        Manifest.permission.ACCESS_COARSE_LOCATION
-    )
 
 
     private val geofenceReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             val transitionType = intent.getStringExtra("transitionType")
             val geofenceIds = intent.getStringExtra("geofenceIds")
-
             // Use the received data as needed
             Log.d(TAG, "Geofence transition: $transitionType, Geofences: $geofenceIds")
             mBinding.root.showSnackBar("Transition: $transitionType", SnackBarStatus.Success)
@@ -81,12 +81,8 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
         super.onCreate(savedInstanceState)
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
-        // Register the local broadcast receiver
-        LocalBroadcastManager.getInstance(this).registerReceiver(
-            geofenceReceiver,
-            IntentFilter("com.dharmesh.geofencedemo.GEOFENCE_EVENT")
-        )
         initMap()
+        setupGeofencing()
     }
 
     private fun initMap() {
@@ -96,22 +92,20 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
         mapFragment.getMapAsync(this)
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
         geofencingClient = LocationServices.getGeofencingClient(this)
-        geofenceHelper = GeofenceManager(this)
 
         // Here create location request Builder
         locationRequest = LocationRequest.Builder(Priority.PRIORITY_HIGH_ACCURACY, 10000)
             .setMinUpdateIntervalMillis(5000)
             .build()
 
-        // Initialize location callback and get location updates
-        locationCallback = object : LocationCallback() {
-            override fun onLocationResult(locationResult: LocationResult) {
-                locationResult.locations.forEach { location ->
-                    updateLocationOnMap(location)
-                }
-            }
-        }
+    }
 
+    private fun setupGeofencing() {
+        geofenceManager = GeofenceManager(this)
+        // Register the local broadcast receiver
+        LocalBroadcastManager.getInstance(this).registerReceiver(
+            geofenceReceiver, IntentFilter("com.dharmesh.geofencedemo.GEOFENCE_EVENT")
+        )
     }
 
     private fun updateLocationOnMap(location: Location) {
@@ -198,10 +192,12 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
     private fun goToSettings() {
-        val intent = Intent()
-        intent.action = Settings.ACTION_APPLICATION_DETAILS_SETTINGS
-        intent.data = Uri.fromParts("package", applicationContext.packageName, null)
-        startActivity(intent)
+        startActivity(
+            Intent(
+                Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
+                Uri.fromParts("package", packageName, null)
+            )
+        )
     }
 
     private fun startLocationUpdates() {
@@ -240,41 +236,31 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
     private fun onHandleMapLongClick(latLng: LatLng) {
         mMap.clear()
         addGeofence(latLng)
-        addGeofenceMarker(latLng)
-        addCircleOverMarker(latLng)
-
+        addMarkerAndCircle(latLng)
     }
 
-    private fun addGeofenceMarker(latLng: LatLng) {
-        val markerOptions = MarkerOptions().position(latLng)
-            .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
-        mMap.addMarker(markerOptions)
+    private fun addMarkerAndCircle(latLng: LatLng) {
+        mMap.addMarker(
+            MarkerOptions().position(latLng)
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+        )
+        mMap.addCircle(
+            CircleOptions().center(latLng).radius(GEOFENCE_RADIUS.toDouble()).strokeWidth(3f)
+                .strokeColor(ContextCompat.getColor(this, R.color.marker_circle_border_color))
+                .fillColor(ContextCompat.getColor(this, R.color.marker_circle_color))
+        )
     }
 
-    private fun addCircleOverMarker(latLng: LatLng) {
-        val circleOption = CircleOptions()
-            .center(latLng)
-            .radius(GEOFENCE_RADIUS.toDouble())
-            .strokeWidth(3f)
-            .strokeColor(
-                ContextCompat.getColor(
-                    this@MainActivity,
-                    R.color.marker_circle_border_color
-                )
-            )
-            .fillColor(ContextCompat.getColor(this@MainActivity, R.color.marker_circle_color))
-        mMap.addCircle(circleOption)
-    }
 
     private fun addGeofence(latLng: LatLng) {
-        val geofence = geofenceHelper.getGeofence(
+        val geofence = geofenceManager.getGeofence(
             GEOFENCE_ID,
             latLng,
             GEOFENCE_RADIUS,
             Geofence.GEOFENCE_TRANSITION_ENTER or Geofence.GEOFENCE_TRANSITION_DWELL or Geofence.GEOFENCE_TRANSITION_EXIT
         )
-        val geofencingRequest = geofenceHelper.createGeofencingRequest(geofence)
-        val pendingIntent = geofenceHelper.createPendingIntent()
+        val geofencingRequest = geofenceManager.createGeofencingRequest(geofence)
+        val pendingIntent = geofenceManager.createPendingIntent()
 
         if (ActivityCompat.checkSelfPermission(
                 this,
@@ -291,7 +277,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
                 )
             }
             .addOnFailureListener { e ->
-                val errorMessage = geofenceHelper.getErrorString(e)
+                val errorMessage = geofenceManager.getErrorString(e)
                 mBinding.root.showSnackBar(errorMessage, SnackBarStatus.Failure)
             }
     }
@@ -307,13 +293,17 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
         LocalBroadcastManager.getInstance(this).unregisterReceiver(geofenceReceiver)
     }
 
-    @RequiresApi(Build.VERSION_CODES.Q)
-    private val backgroundLocationPermission =
-        arrayOf(Manifest.permission.ACCESS_BACKGROUND_LOCATION)
-
 
     companion object {
         private const val TAG = "MainActivity"
+        private val locationPermission = arrayOf(
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.ACCESS_COARSE_LOCATION
+        )
+
+        @RequiresApi(Build.VERSION_CODES.Q)
+        private val backgroundLocationPermission =
+            arrayOf(Manifest.permission.ACCESS_BACKGROUND_LOCATION)
     }
 
 
