@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GeofenceAppDemo</string>
+    <string name="geofence_has_added">Geofence has been added</string>
+    <string name="go_to_settings">Go to Settings</string>
+    <string name="lets_go_to_the_setting_screen">Lets go to the setting screen</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="current_location">Current Location</string>
+</resources>

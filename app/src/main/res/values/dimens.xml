@@ -1,0 +1,330 @@
+<resources>
+    <dimen name="_0dp">0dp</dimen>
+    <dimen name="_2dp">2dp</dimen>
+    <dimen name="_1dp">1dp</dimen>
+    <dimen name="_4dp">4dp</dimen>
+    <dimen name="_6dp">6dp</dimen>
+    <dimen name="_8dp">8dp</dimen>
+    <dimen name="_10dp">10dp</dimen>
+    <dimen name="_12dp">12dp</dimen>
+    <dimen name="_14dp">14dp</dimen>
+    <dimen name="_16dp">16dp</dimen>
+    <dimen name="_18dp">18dp</dimen>
+    <dimen name="_20dp">20dp</dimen>
+    <dimen name="_22dp">22dp</dimen>
+    <dimen name="_24dp">24dp</dimen>
+    <dimen name="_28dp">28dp</dimen>
+    <dimen name="_30dp">30dp</dimen>
+    <dimen name="_32dp">32dp</dimen>
+    <dimen name="_36dp">36dp</dimen>
+    <dimen name="_38dp">38dp</dimen>
+    <dimen name="_40dp">40dp</dimen>
+    <dimen name="_42dp">42dp</dimen>
+    <dimen name="_44dp">44dp</dimen>
+    <dimen name="_52dp">52dp</dimen>
+    <dimen name="_54dp">54dp</dimen>
+    <dimen name="_60dp">60dp</dimen>
+    <dimen name="_72dp">72dp</dimen>
+    <dimen name="_74dp">74dp</dimen>
+    <dimen name="_112dp">112dp</dimen>
+    <dimen name="_200dp">200dp</dimen>
+    <dimen name="_256dp">256dp</dimen>
+    <dimen name="_272dp">272dp</dimen>
+    <dimen name="_354dp">354dp</dimen>
+    <dimen name="_80dp">80dp</dimen>
+
+    <dimen name="small_1dp">1dp</dimen>
+    <dimen name="small_2dp">2dp</dimen>
+    <dimen name="small_4dp">4dp</dimen>
+    <dimen name="small_6dp">6dp</dimen>
+    <dimen name="small_8dp">8dp</dimen>
+    <dimen name="small_9dp">9dp</dimen>
+    <dimen name="small_10dp">10dp</dimen>
+    <dimen name="small_11dp">11dp</dimen>
+
+    <dimen name="normal_12dp">12dp</dimen>
+    <dimen name="normal_14dp">14dp</dimen>
+    <dimen name="normal_16dp">16dp</dimen>
+    <dimen name="normal_17dp">17dp</dimen>
+    <dimen name="normal_18dp">18dp</dimen>
+    <dimen name="normal_19dp">19dp</dimen>
+    <dimen name="normal_20dp">20dp</dimen>
+    <dimen name="normal_21dp">21dp</dimen>
+    <dimen name="normal_22dp">22dp</dimen>
+    <dimen name="normal_24dp">24dp</dimen>
+    <dimen name="normal_26dp">26dp</dimen>
+    <dimen name="normal_28dp">28dp</dimen>
+    <dimen name="normal_30dp">30dp</dimen>
+    <dimen name="normal_32dp">32dp</dimen>
+    <dimen name="normal_34dp">34dp</dimen>
+    <dimen name="normal_36dp">36dp</dimen>
+    <dimen name="normal_40dp">40dp</dimen>
+    <dimen name="normal_44dp">44dp</dimen>
+
+    <dimen name="large_46">46dp</dimen>
+    <dimen name="large_48">48dp</dimen>
+    <dimen name="large_50">50dp</dimen>
+    <dimen name="large_52">52dp</dimen>
+    <dimen name="large_56">56dp</dimen>
+    <dimen name="large_58">58dp</dimen>
+    <dimen name="large_60">60dp</dimen>
+    <dimen name="large_64">64dp</dimen>
+    <dimen name="large_66">66dp</dimen>
+    <dimen name="large_75">75dp</dimen>
+    <dimen name="large_76">76dp</dimen>
+    <dimen name="large_92">92dp</dimen>
+    <dimen name="large_100">100dp</dimen>
+    <dimen name="large_110">110dp</dimen>
+    <dimen name="large_136">136dp</dimen>
+    <dimen name="large_134">134dp</dimen>
+    <dimen name="large_140">140dp</dimen>
+    <dimen name="large_141">141dp</dimen>
+    <dimen name="large_150">150dp</dimen>
+    <dimen name="large_153">153dp</dimen>
+    <dimen name="large_165">165dp</dimen>
+    <dimen name="large_218">218dp</dimen>
+    <dimen name="large_360">360dp</dimen>
+
+    <!-- Text size -->
+    <dimen name="_3sp">3sp</dimen>
+    <dimen name="_4sp">4sp</dimen>
+    <dimen name="_5sp">5sp</dimen>
+    <dimen name="_6sp">6sp</dimen>
+    <dimen name="_10sp">10sp</dimen>
+    <dimen name="_12sp">12sp</dimen>
+    <dimen name="_14sp">14sp</dimen>
+    <dimen name="_16sp">16sp</dimen>
+    <dimen name="_18sp">18sp</dimen>
+    <dimen name="_20sp">20sp</dimen>
+    <dimen name="_22sp">22sp</dimen>
+    <dimen name="_24sp">24sp</dimen>
+    <dimen name="_28sp">28sp</dimen>
+    <dimen name="_23sp">23sp</dimen>
+    <dimen name="_30sp">30sp</dimen>
+    <dimen name="_36sp">36sp</dimen>
+
+    <!--============================  onBoarding dimens ========================================-->
+    <!--Update Login Pin-->
+    <dimen name="left_right_margin_create_login_pin_edit_text">@dimen/large_60</dimen>
+    <dimen name="top_margin_onBoarding_confirm_pin_text">@dimen/large_52</dimen>
+    <dimen name="top_margin_onBoarding_confirm_pin_edit_text">@dimen/normal_32dp</dimen>
+    <!-- ============================ Complete onBoarding dimens ================================-->
+
+
+    <dimen name="toolbar_title_size">@dimen/_14sp</dimen>
+    <dimen name="toolbar_title_line_height">@dimen/_20sp</dimen>
+    <dimen name="title_line_height">@dimen/_28sp</dimen>
+    <dimen name="normal_line_height">@dimen/_20sp</dimen>
+    <dimen name="normal_description_line_height">@dimen/_14sp</dimen>
+    <dimen name="sim_selection_tile_text_size">@dimen/_20sp</dimen>
+    <dimen name="sim_selection_description_text_size">@dimen/_22sp</dimen>
+
+    <!--dashboard-->
+    <!--text size-->
+    <dimen name="bottom_view_text_size">@dimen/small_10dp</dimen>
+    <dimen name="top_recycler_items_text_size">@dimen/normal_12dp</dimen>
+    <dimen name="toolbar_textSize">@dimen/normal_20dp</dimen>
+    <dimen name="favorite_textSize">@dimen/normal_16dp</dimen>
+    <dimen name="favorite_text3Size">@dimen/normal_14dp</dimen>
+
+    <!--line height-->
+    <dimen name="bottom_navigation_menu_line_height">@dimen/_16sp</dimen>
+    <dimen name="bottom_navigation_menu_height">@dimen/large_56</dimen>
+    <dimen name="item_view_text_line_height">@dimen/_20sp</dimen>
+    <dimen name="toolbar_title_text_line_height">@dimen/_28sp</dimen>
+    <dimen name="favorite_text_line_height">@dimen/_22sp</dimen>
+
+    <!--Margin Padding-->
+    <dimen name="favourite_text1_margintop">@dimen/normal_26dp</dimen>
+    <dimen name="favourite_text1_marginleft">@dimen/normal_16dp</dimen>
+    <dimen name="add_favourite_img_margintop">@dimen/normal_32dp</dimen>
+    <dimen name="no_fav_added_margintop">@dimen/normal_28dp</dimen>
+    <dimen name="padding_rv_item">@dimen/normal_16dp</dimen>
+
+    <!--recyclerCardView-->
+    <dimen name="cv_elevation">@dimen/small_4dp</dimen>
+    <dimen name="cv_radius">@dimen/small_6dp</dimen>
+    <dimen name="cv_img_topbottom_padding">@dimen/normal_14dp</dimen>
+    <dimen name="cv_img_leftright_padding">@dimen/normal_28dp</dimen>
+    <dimen name="cv_text_top_marging">@dimen/small_4dp</dimen>
+
+    <!--padding/Margin-->
+    <!--setting screen-->
+    <dimen name="left_right_padding">@dimen/normal_16dp</dimen>
+    <dimen name="cv_bio_login_margintop">@dimen/normal_16dp</dimen>
+    <dimen name="cv_padding">@dimen/normal_16dp</dimen>
+    <dimen name="cv_titles_bottom_margin">@dimen/small_4dp</dimen>
+    <dimen name="setting_title_top_marging">@dimen/normal_32dp</dimen>
+    <dimen name="setting_title_bottom_marging">@dimen/normal_14dp</dimen>
+    <dimen name="cv_login_pin_top_marging">@dimen/normal_14dp</dimen>
+    <dimen name="cv_acc_top_marging">@dimen/normal_14dp</dimen>
+    <dimen name="cv_button_top_margin">@dimen/normal_14dp</dimen>
+    <dimen name="cv_setting_radius_corner">@dimen/_6dp</dimen>
+    <!--Contact Us-->
+    <dimen name="desp_text_top_marging">@dimen/small_4dp</dimen>
+    <!--Block Accounts-->
+    <dimen name="sv_top_marging_blk_cnt">@dimen/normal_20dp</dimen>
+    <dimen name="img_no_blk_acc_top_marging">@dimen/large_92</dimen>
+    <dimen name="no_blk_acc_title_margintop">@dimen/normal_16dp</dimen>
+    <!--feedback-->
+    <dimen name="tell_us_more_top_marging">@dimen/normal_28dp</dimen>
+    <dimen name="tv_feedback_padding">@dimen/normal_14dp</dimen>
+    <dimen name="tv_feedback_top_marging">@dimen/small_2dp</dimen>
+
+    <!--Profile-->
+    <dimen name="iv_height_width">@dimen/large_50</dimen>
+    <dimen name="iv_profile_strock">@dimen/small_1dp</dimen>
+    <dimen name="iv_edit_profile_left_margin">@dimen/small_10dp</dimen>
+    <dimen name="tv_profile_name_top_marging">@dimen/small_10dp</dimen>
+    <dimen name="tv_profile_email_top_marging">@dimen/small_2dp</dimen>
+    <dimen name="cv_bottom_profile_margin">@dimen/normal_16dp</dimen>
+    <dimen name="share_download_top_marging">@dimen/normal_16dp</dimen>
+    <dimen name="buttons_top_marging">@dimen/normal_16dp</dimen>
+    <dimen name="tv_linked_acc_count_left_margin">@dimen/normal_12dp</dimen>
+    <dimen name="tv_complaint_left_margin">@dimen/normal_12dp</dimen>
+    <dimen name="tv_complaint_top_margin">@dimen/normal_20dp</dimen>
+    <dimen name="iv_right_arrow_green_padding">@dimen/small_6dp</dimen>
+    <dimen name="view_pager_left_right_padding">@dimen/normal_16dp</dimen>
+    <dimen name="view_pager_top_padding">@dimen/normal_30dp</dimen>
+    <dimen name="image_view_margin">@dimen/normal_18dp</dimen>
+    <dimen name="iv_arrow_inner_margin">@dimen/small_8dp</dimen>
+    <dimen name="tv_share_download_left_margin">@dimen/small_8dp</dimen>
+    <dimen name="iv_download_left_margin">@dimen/normal_24dp</dimen>
+    <dimen name="iv_add_upi_id_padding">@dimen/large_66</dimen>
+    <dimen name="cl_upi_id_top_margin">@dimen/normal_26dp</dimen>
+    <dimen name="iv_copy_left_margin">@dimen/small_10dp</dimen>
+
+    <!--Update Login Pin-->
+    <dimen name="left_right_margin_pin_edit_text">@dimen/large_60</dimen>
+    <dimen name="top_margin_pin_edit_text">@dimen/_42dp</dimen>
+    <dimen name="top_margin_forget_pin_text">@dimen/normal_40dp</dimen>
+    <dimen name="left_margin_forget_pin_text">@dimen/normal_16dp</dimen>
+    <dimen name="left_margin_reset_pin_text">@dimen/small_8dp</dimen>
+    <dimen name="top_margin_confirm_pin_text">@dimen/large_52</dimen>
+    <dimen name="top_margin_confirm_pin_edit_text">@dimen/normal_32dp</dimen>
+    <dimen name="top_margin_security_question_text">@dimen/normal_28dp</dimen>
+
+    <!--textSize-->
+    <dimen name="setting_textsize">@dimen/normal_20dp</dimen>
+    <dimen name="biometric_login_title_textsize">@dimen/normal_14dp</dimen>
+    <dimen name="biometric_login_desc_textsize">@dimen/normal_14dp</dimen>
+    <dimen name="button_textsize">@dimen/normal_14dp</dimen>
+    <!--Contact Us-->
+    <dimen name="cnt_us_descp_textsize">@dimen/normal_12dp</dimen>
+    <!--feedback-->
+    <dimen name="feedback_tell_us_more_textsize">@dimen/normal_12dp</dimen>
+    <!--Profile-->
+    <dimen name="linked_acc_count_textsize">@dimen/normal_14dp</dimen>
+    <dimen name="share_download_textsize">@dimen/normal_12dp</dimen>
+    <dimen name="primary_upi_id_label_textsize">@dimen/normal_12dp</dimen>
+    <dimen name="upi_id_textsize">@dimen/normal_16dp</dimen>
+    <dimen name="btn_disable_textsize">@dimen/normal_14dp</dimen>
+
+
+    <!--lineheight-->
+    <dimen name="iv_corner_size">50%</dimen>
+
+    <dimen name="approve_pay_item_padding">@dimen/normal_16dp</dimen>
+    <dimen name="top_margin_amount_textview">@dimen/normal_16dp</dimen>
+    <dimen name="top_margin_amount_descp_textview">@dimen/small_8dp</dimen>
+    <dimen name="top_margin_approve_pay_recyclerView">@dimen/normal_24dp</dimen>
+    <dimen name="top_bottom_margin_approve_pay_item">@dimen/small_8dp</dimen>
+    <dimen name="image_view_right_margin">@dimen/normal_12dp</dimen>
+
+    <dimen name="faqs_adapter_answer_top_bottom_padding">@dimen/normal_30dp</dimen>
+    <dimen name="faqs_adapter_answer_left_Right_padding">@dimen/normal_16dp</dimen>
+    <dimen name="faqs_adapter_bottom_margin">@dimen/small_1dp</dimen>
+    <dimen name="faqs_empty_state_top_margin">@dimen/large_136</dimen>
+    <dimen name="icon_width_height">36dp</dimen>
+    <dimen name="icon_text">22dp</dimen>
+    <dimen name="icon_account_balance_width">@dimen/_80dp</dimen>
+    <dimen name="icon_account_balance_height">@dimen/large_50</dimen>
+    <dimen name="icon_account_balance_filled_height_and_width">@dimen/normal_18dp</dimen>
+    <dimen name="icon_account_profile_height_and_width">@dimen/normal_36dp</dimen>
+    <dimen name="icon_add_new_upi_id_width">@dimen/large_66</dimen>
+    <dimen name="icon_add_new_upi_id_height">@dimen/large_76</dimen>
+    <dimen name="icon_approve_to_pay_width">@dimen/_80dp</dimen>
+    <dimen name="icon_approve_to_pay_height">@dimen/large_50</dimen>
+    <dimen name="icon_arrow_down_height_and_width">@dimen/normal_24dp</dimen>
+    <dimen name="icon_arrow_down_green_height_and_width">@dimen/normal_24dp</dimen>
+    <dimen name="icon_arrow_up_green_height_and_width">@dimen/normal_24dp</dimen>
+    <dimen name="icon_back_arrow_black_width">@dimen/small_9dp</dimen>
+    <dimen name="icon_back_arrow_black_height">@dimen/normal_14dp</dimen>
+    <dimen name="icon_back_arrow_white_height_and_width">@dimen/normal_28dp</dimen>
+    <dimen name="icon_background_width">@dimen/_54dp</dimen>
+    <dimen name="icon_background_height">@dimen/_38dp</dimen>
+    <dimen name="icon_bank_img_width">@dimen/normal_19dp</dimen>
+    <dimen name="icon_bank_img_height">@dimen/normal_21dp</dimen>
+    <dimen name="icon_bhim_upi_background_width">@dimen/large_360</dimen>
+    <dimen name="icon_bhim_upi_background_height">@dimen/large_50</dimen>
+    <dimen name="icon_calendar_height_and_width">@dimen/normal_20dp</dimen>
+    <dimen name="icon_calender_new_mandate_height_and_width">@dimen/normal_16dp</dimen>
+    <dimen name="icon_call_height_and_width">@dimen/normal_24dp</dimen>
+    <dimen name="icon_cancel_height_and_width">@dimen/normal_14dp</dimen>
+    <dimen name="icon_contact_height_and_width">@dimen/normal_20dp</dimen>
+    <dimen name="icon_delete_height_and_width">@dimen/normal_24dp</dimen>
+    <dimen name="icon_download_profile_height_and_width">@dimen/normal_28dp</dimen>
+    <dimen name="icon_empty_state_select_account_height_and_width">@dimen/large_150</dimen>
+    <dimen name="icon_email_height_and_width">@dimen/normal_24dp</dimen>
+    <dimen name="icon_file_copy_height_and_width">@dimen/normal_12dp</dimen>
+    <dimen name="icon_home_height">@dimen/normal_20dp</dimen>
+    <dimen name="icon_home_width">@dimen/normal_17dp</dimen>
+    <dimen name="icon_keyboard_arrow_left_width">@dimen/small_9dp</dimen>
+    <dimen name="icon_keyboard_arrow_left_height">@dimen/normal_14dp</dimen>
+    <dimen name="icon_keyboard_arrow_left_right_black_height_and_width">@dimen/normal_32dp</dimen>
+    <dimen name="icon_keyboard_arrow_right_green_height_and_width">@dimen/normal_24dp</dimen>
+    <dimen name="icon_mandate_add_height_and_width">@dimen/normal_14dp</dimen>
+    <dimen name="icon_mandate_calendar_width">@dimen/_10dp</dimen>
+    <dimen name="icon_mandate_calendar_height">@dimen/small_11dp</dimen>
+    <dimen name="icon_mandates_width">@dimen/_80dp</dimen>
+    <dimen name="icon_mandates_height">@dimen/large_50</dimen>
+    <dimen name="icon_my_complaints_height_and_width">@dimen/normal_20dp</dimen>
+    <dimen name="icon_no_account_available_height_and_width">@dimen/large_150</dimen>
+    <dimen name="icon_no_bank_account_width">@dimen/large_165</dimen>
+    <dimen name="icon_no_bank_account_height">@dimen/large_134</dimen>
+    <dimen name="icon_no_complaints_width">@dimen/_200dp</dimen>
+    <dimen name="icon_no_complaints_height">@dimen/large_140</dimen>
+    <dimen name="icon_no_faqs_width">@dimen/large_150</dimen>
+    <dimen name="icon_no_faqs_height">@dimen/large_153</dimen>
+    <dimen name="icon_no_transaction_width">@dimen/_200dp</dimen>
+    <dimen name="icon_no_transaction_height">@dimen/large_141</dimen>
+    <dimen name="icon_option_forgot_upi_height_and_width">@dimen/normal_34dp</dimen>
+    <dimen name="icon_option_view_balance_height_and_width">@dimen/normal_36dp</dimen>
+    <dimen name="icon_phone_image_height_and_width">@dimen/normal_18dp</dimen>
+    <dimen name="icon_plus_height_and_width">@dimen/normal_14dp</dimen>
+    <dimen name="icon_no_primary_account_height_and_width">@dimen/normal_36dp</dimen>
+    <dimen name="icon_profile_width">@dimen/normal_17dp</dimen>
+    <dimen name="icon_profile_height">@dimen/normal_16dp</dimen>
+    <dimen name="icon_qr_code_background_height_and_width">@dimen/large_218</dimen>
+    <dimen name="icon_refresh_notification_width">@dimen/normal_22dp</dimen>
+    <dimen name="icon_refresh_notification_height">@dimen/normal_16dp</dimen>
+    <dimen name="icon_request_money_width">@dimen/_80dp</dimen>
+    <dimen name="icon_request_money_height">@dimen/large_50</dimen>
+    <dimen name="icon_scan_and_pay_width">@dimen/_80dp</dimen>
+    <dimen name="icon_scan_and_pay_height">@dimen/large_50</dimen>
+    <dimen name="icon_search_height_and_width">@dimen/normal_24dp</dimen>
+    <dimen name="icon_selected_radio_button_height_and_width">@dimen/normal_20dp</dimen>
+    <dimen name="icon_send_money_width">@dimen/_80dp</dimen>
+    <dimen name="icon_send_money_height">@dimen/large_50</dimen>
+
+
+    <!-- Link Account Module -->
+    <dimen name="icon_link_account_cancel_height_and_width">@dimen/normal_14dp</dimen>
+
+    <!-- QR SCAN-->
+    <dimen name="barcode_reticle_stroke_width">1dp</dimen>
+    <dimen name="barcode_reticle_stroke2_width">8dp</dimen>
+    <dimen name="barcode_reticle_corner_radius">16dp</dimen>
+    <dimen name="barcode_reticle_ripple_stroke_width">4dp</dimen>
+    <dimen name="barcode_reticle_ripple_size_offset">40dp</dimen>
+
+
+
+    <dimen name="cv_corner_radius">@dimen/small_6dp</dimen>
+    <dimen name="profile_photo_top_bottom_margin">@dimen/normal_16dp</dimen>
+
+
+
+
+</resources>
+

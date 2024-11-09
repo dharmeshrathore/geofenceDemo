@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.GeofenceAppDemo" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.GeofenceAppDemo" parent="Base.Theme.GeofenceAppDemo" />
+
+    <style name="styleSnackBarText">
+        <item name="android:textColor">@color/snackbar_text_color</item>
+        <item name="android:textSize">@dimen/_14sp</item>
+        <item name="lineHeight">@dimen/_20sp</item>
+    </style>
+</resources>

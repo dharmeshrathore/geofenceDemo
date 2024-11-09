@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="marker_circle_border_color">#008080</color>
+    <color name="marker_circle_color">#99008080</color>
+    <color name="snackbar_text_color">#008080</color>
+    <color name="snack_bar_text_failure_color">#FF0000</color>
+    <color name="snack_bar_failure_background_color">#FFE7E7</color>
+    <color name="snack_bar_success_background_color">#E0F2F0</color>
+    <color name="snack_bar_success_text_color">#009681</color>
+</resources>
