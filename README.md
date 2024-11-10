@@ -38,7 +38,7 @@ Add these permissions to AndroidManifest.xml for location access:
 
 ## to check crash in App
 - Add below code in MainActivity class in onCreate function
-- 
+
      val crashButton = Button(this)
      crashButton.text = "Test Crash"
      crashButton.setOnClickListener {
