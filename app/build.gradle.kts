@@ -4,6 +4,8 @@ plugins {
     id("kotlin-parcelize")
     id("kotlin-kapt")
     alias(libs.plugins.maps.platform.gradle.plugin)
+    alias(libs.plugins.google.service.plugin)
+    alias(libs.plugins.firebase.crashlytics.plugin)
 }
 
 android {
@@ -75,4 +77,8 @@ dependencies {
     // Koin.io for dependency injection
     implementation(libs.io.insert.koin)
     implementation(libs.io.insert.koin.android.compat)
+
+    //firebase
+    implementation(libs.firebase.crashlytics)
+    implementation(libs.firebase.analytics)
 }

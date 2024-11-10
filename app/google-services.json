@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "886186730543",
+    "project_id": "geofencedemo-8aafa",
+    "storage_bucket": "geofencedemo-8aafa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:886186730543:android:d043b8320ca9fce83492da",
+        "android_client_info": {
+          "package_name": "com.dharmesh.geofencedemo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmgSCy1hY3pJKVmpKDlAPdZNRUEP3MkMY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

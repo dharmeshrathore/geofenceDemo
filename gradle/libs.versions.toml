@@ -21,6 +21,10 @@ fragmentKtx = "1.8.5"
 navigationFragmentKtx = "2.8.3"
 navigationUiKtx = "2.8.3"
 navigationFeatureFragments = "2.8.3"
+google_service_version = "4.4.2"
+crashlytics_version = "3.0.2"
+firebase_crashlytics = "19.2.1"
+firebase_analytics = "22.1.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -45,9 +49,12 @@ androidx-frament-ktx = { module = "androidx.fragment:fragment-ktx", version.ref 
 androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
 androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
 androidx-navigation-feature-fragment = { group = "androidx.navigation", name = "navigation-dynamic-features-fragment", version.ref = "navigationFeatureFragments" }
+firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics", version.ref = "firebase_crashlytics" }
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics", version.ref = "firebase_analytics" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 maps-platform-gradle-plugin = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "mapsplatformPlugin" }
-
+google-service-plugin = { id = "com.google.gms.google-services", version.ref = "google_service_version" }
+firebase-crashlytics-plugin = { id = "com.google.firebase.crashlytics", version.ref = "crashlytics_version" }
